@@ -1,0 +1,490 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #0D0D2B;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.logo {
+    z-index: 0;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+    width: 100%;
+}
+
+.logo img {
+    height: 100vh;
+    height: 130%;
+    transform: translateY(20%) translateX(1%);
+    z-index: 0;
+}
+
+.logo-nova-conta {
+    z-index: 0;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+    width: 100%;
+}
+
+.logo-nova-conta img {
+    height: 100vh;
+    height: 130%;
+    transform: translateY(20%) translateX(1%);
+    z-index: 0;
+}
+
+.login-form, .buttons {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login-form {
+    position: relative;
+    z-index: 2;
+    transform: translateY(-580px)
+}
+
+.login-form input {
+    width: 200px;
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.button {
+    z-index: 1;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 6rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.new-account {
+    background-color: #039c83;
+    transform: translateY(80px);
+}
+
+.new-account:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    transform: translateY(10px);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.welcome-text {
+    z-index: 1;
+    font-size:23px;
+    line-height: 15px;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-10px);
+}
+
+.linha-cinza {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 35.35%;
+    transform: translateY(120px);
+    width: 100vh;
+    height: 100vh;
+    max-width: 500px;
+    max-height: 5px;
+    background-color: rgb(85, 85, 85);
+    z-index: 1;
+}
+
+.linha-cinza2 {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 35.35%;
+    transform: translateY(-95px);
+    width: 100vh;
+    height: 100vh;
+    max-width: 500px;
+    max-height: 5px;
+    background-color: rgb(85, 85, 85);
+    z-index: 1;
+}
+
+.quadrado-branco {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    max-width: 500px;
+    max-height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.quadrado-branco-medico-paciente {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 80%;
+    height: 80%;
+    max-width: 500px;
+    max-height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.quadrado-branco-senha {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 80%;
+    height: 80%;
+    max-width: 500px;
+    max-height: 350px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.quadrado-branco-nova-conta {
+    content: '';
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    max-height: 580px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.portal-text{
+    position: relative;
+    z-index: 2;
+    transform: translateY(-580px)
+}
+
+.portal-text-cadastro {
+    position: relative;
+    z-index: 2;
+    transform: translateY(-650px)
+}
+
+.button-entrar {
+    font-family: "Montserrat", sans-serif;
+    z-index: 1;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 6rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.button-entrar:hover {
+    background-color: #0056b3;
+}
+
+.button-medico {
+    transform:scaleX(105%)
+}
+
+.button-enviar-codigo {
+    z-index: 1;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 6rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.5s;
+    border: none;
+    cursor: pointer;
+    transform: translateY(20px);
+}
+
+.button-enviar-codigo:hover {
+    background-color: #0056b3   ;
+}
+
+.button-codigo {
+    z-index: 1;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 7.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.5s;
+    border: none;
+    cursor: pointer;
+    transform: translateY(20px);
+}
+
+.button-codigo:hover {
+    background-color: #0056b3   ;
+}
+
+.campo {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+}
+
+.campo:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.email {
+    transform:scaleX(150%) scaleY(130%);
+}
+
+.campo-nome {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-70px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-nome:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-cpf {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-60px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-cpf:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-end {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-10px) translateY(-50px);
+    min-width: 880px;
+    min-height: 25px;
+}
+
+.campo-end:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-mail {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-40px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-mail:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-req {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-30px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-req:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-cert {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-10px) translateY(-20px);
+    min-width: 880px;
+    min-height: 25px;
+}
+
+.campo-cert:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-senha {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-10px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-senha:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-confirmar-senha {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-60px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-confirmar-senha:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-esp {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-483px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-esp:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-contato {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-473px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-contato:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-data {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-400px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-data:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-crm {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-390px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-crm:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.new {
+    position: absolute;
+    z-index: 3;
+    transform: translateY(360px);
+}
+
+.login-form2 {
+    transform: translateY(-580px);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    max-height: 200px;
+}
+
+.login-form2 input {
+    z-index: 2;
+    width: 200px;
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.campo-cert2 {
+    font-weight: lighter;
+    font-size: 15px;
+    z-index: 2;
+    transform: translateX(350px) translateY(-368px);
+    color: #777676;
+}
+
+.campo-data2 {
+    font-weight: lighter;
+    font-size: 15px;
+    z-index: 2;
+    transform: translateX(320px) translateY(-518px);
+    color: #777676;
+}
+
+.campo-data3 {
+    font-weight: lighter;
+    font-size: 15px;
+    z-index: 2;
+    transform: translateX(330px) translateY(-492px);
+    color: #777676;
+}
