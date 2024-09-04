@@ -1,0 +1,77 @@
+.quadrado-branco {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    max-width: 500px;
+    max-height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.welcome-text {
+    z-index: 1;
+    font-size:23px;
+    line-height: 15px;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-10px);
+}
+
+.buttons {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.button-medico {
+    transform:scaleX(105%)
+}
+
+.button {
+    z-index: 1;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 6rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.logo {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    height: auto;
+    width: 500px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}

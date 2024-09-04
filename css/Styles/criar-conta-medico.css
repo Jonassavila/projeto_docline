@@ -1,0 +1,250 @@
+.quadrado-branco {
+    content: '';
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    max-height: 580px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.container {
+    height: 100vh;
+}
+
+.portal-text {
+    position: relative;
+    z-index: 2;
+    transform: translateY(-650px)
+}
+
+.campos {
+    transform: translateY(-580px);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    max-height: 200px;
+}
+
+.campos input {
+    z-index: 2;
+    width: 200px;
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.campo-nome {background-color: red;
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-70px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-nome:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-cpf {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-60px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-cpf:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-end {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-10px) translateY(-50px);
+    min-width: 880px;
+    min-height: 25px;
+}
+
+.campo-end:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-mail {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-40px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-mail:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-req {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-30px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-req:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-cert {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-10px) translateY(-20px);
+    min-width: 880px;
+    min-height: 25px;
+}
+
+.campo-cert:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-senha {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(-250px) translateY(-10px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-senha:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-confirmar-senha {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-60px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-confirmar-senha:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-esp {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-483px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-esp:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-contato {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-473px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-contato:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-data {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-400px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-data:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.campo-crm {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+    transform: translateX(230px) translateY(-390px);
+    min-width: 400px;
+    min-height: 25px;
+}
+
+.campo-crm:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.button {
+    z-index: 1;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 6rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.new {
+    position: absolute;
+    z-index: 3;
+    transform: translateY(360px);
+}
+
+.campo-cert2 {
+    font-weight: lighter;
+    font-size: 15px;
+    z-index: 2;
+    transform: translateX(350px) translateY(-368px);
+    color: #777676;
+}
+
+.campo-data2 {
+    font-weight: lighter;
+    font-size: 15px;
+    z-index: 2;
+    transform: translateX(320px) translateY(-518px);
+    color: #777676;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    height: auto;
+    width: 500px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+

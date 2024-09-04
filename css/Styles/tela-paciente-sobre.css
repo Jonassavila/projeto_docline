@@ -1,0 +1,106 @@
+    .logo {
+        position: absolute;
+        top: 3%;
+        left: 15.5%;
+        transform: translateX(-50%);
+        z-index: 3;
+        height: auto;
+        width: 400px;
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .quadrado-branco {
+        content: '';
+        position: absolute;
+        top: 17%;
+        left: 4%;
+        width: 100%;
+        height: 200%;
+        max-width: 1575px;
+        max-height: 1000px;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .linha-cinza {
+        position: absolute;
+        top: 75%;
+        left: 68px;
+        width: 100%;
+        height: 10px;
+        max-width: 1575px;
+        background-color: rgb(199, 199, 199);
+    }
+
+    .img-clinica img {
+        width: 93.5%;
+        position: absolute;
+        top: 17%;
+        left: 4%;
+        border-radius: 20px;  
+    }
+
+    .logo-clinica img {
+        width: 10%;
+        position: absolute;
+        top: 42%;
+        left: 8%;
+        border-radius: 100px;
+        box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+        height: 100vh;
+    }
+
+    .cabecalho-text, buttons{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 48%;
+        left: 20%; 
+    }
+
+    .cabecalho-text {
+        margin-left: 20px;
+        font-size: 30px;
+    }
+
+    .cabecalho-text, span {
+        width: 1200px;
+    }
+
+    .cabecalho-text a {
+        color: #575656;
+        text-decoration: none;
+    }
+
+    .cabecalho-text a:hover {
+        text-decoration: underline;
+    }
+
+    .quadrado-cinza {
+            position: absolute;
+            top: 83%;
+            left: 8%;
+            width: 100%;
+            height: 400px;
+            max-width: 1445px;
+            background-color: rgb(199, 199, 199);
+            border-radius: 30px;
+    }
+
+    .texto {
+        position: absolute;
+        top: 83%;
+        left: 11%;
+        right: 1%;
+        font-size: 17px;
+        color: #333;
+        max-width: 80%;
+        line-height: 1.5;
+    }

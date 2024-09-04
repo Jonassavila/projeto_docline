@@ -1,0 +1,112 @@
+.quadrado-branco {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 80%;
+    height: 80%;
+    max-width: 500px;
+    max-height: 375px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.linha-cinza {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 35.35%;
+    transform: translateY(-95px);
+    width: 100vh;
+    height: 100vh;
+    max-width: 500px;
+    max-height: 5px;
+    background-color: rgb(85, 85, 85);
+    z-index: 1;
+}
+
+.container {
+    height: 100vh;
+}
+
+.portal-text{
+    position: relative;
+    z-index: 2;
+    transform: translateY(-580px)
+}
+
+.portal-text-cadastro {
+    position: relative;
+    z-index: 2;
+    transform: translateY(-650px)
+}
+
+.login-form, .buttons {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login-form {
+    position: relative;
+    z-index: 2;
+    transform: translateY(-580px)
+}
+
+.login-form input {
+    width: 200px;
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.campo {
+    background-color:rgb(184, 183, 183);
+    border-radius: 15px;
+}
+
+.campo:hover {
+    border-color: rgb(122, 100, 248);
+}
+
+.email {
+    transform:scaleX(150%) scaleY(130%);
+}
+
+.button-codigo {
+    z-index: 1;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 7.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.5s;
+    border: none;
+    cursor: pointer;
+    transform: translateY(20px);
+}
+
+.button-codigo:hover {
+    background-color: #0056b3   ;
+}
+
+.logo {
+    position: absolute;
+    top:15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    height: auto;
+    width: 500px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}

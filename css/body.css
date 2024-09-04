@@ -1,0 +1,12 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #0D0D2B;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    height: 100%;
+}
