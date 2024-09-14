@@ -1,0 +1,137 @@
+.quadrado-branco {
+    content: '';
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 80%;
+    height: 80%;
+    max-width: 2500px;
+    max-height: 435px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.container {
+    height: 100vh;
+}
+
+.portal-text{
+    position: relative;
+    z-index: 2;
+    font-size: 25px;
+    transform: translateY(-615px);
+}
+
+.pix img {
+    width: 15%;
+    position: absolute;
+    top: 42%;
+    left: 240px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.pix img:hover {
+    filter: grayscale(0);
+    transition: 0.2s;
+    transform: translateY(-15px) translateX(15px) scale(1.05);
+}
+
+.cartao img {
+    width: 15%;
+    position: absolute;
+    top: 42%;
+    left: 560px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.cartao img:hover {
+    filter: grayscale(0);
+    transition: 0.2s;
+    transform: translateY(-15px) translateX(15px) scale(1.05);
+}
+
+.boleto img {
+    width: 15%;
+    position: absolute;
+    top: 42%;
+    left: 880px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.boleto img:hover {
+    filter: grayscale(0);
+    transition: 0.2s;
+    transform: translateY(-15px) translateX(15px) scale(1.05);
+}
+
+.plano img {
+    width: 15%;
+    position: absolute;
+    top: 42%;
+    left: 1200px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.plano img:hover {
+    filter: grayscale(0);
+    transition: 0.2s;
+    transform: translateY(-15px) translateX(15px) scale(1.05);
+}
+
+.logo {
+    position: absolute;
+    top:15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    height: auto;
+    width: 500px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.valor-text{
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+    left: -12%;
+    transform: translateY(-380px);
+}
+
+.valor {
+    color: blue;
+    position: relative;
+    z-index: 2;
+    font-size: 40px;
+    left: 45%;
+    transform: translateY(-525px);
+    max-width: 300px;
+}
+
+.consulta-msg {
+    font-size: 20px;
+}
+
+
+#ok-btn:hover {
+    background-color: #3713b9;
+    transform: translateY(-5px);
+    transition: 0.2s;
+}

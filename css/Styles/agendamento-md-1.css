@@ -1,13 +1,13 @@
 .quadrado-branco {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -40%);
     width: 80%;
     height: 80%;
     max-width: 500px;
-    max-height: 400px;
+    max-height: 435px;
     background-color: white;
     border-radius: 20px;
     z-index: 1;
@@ -18,7 +18,7 @@
     position: absolute;
     top: 50%;
     left: 35.35%;
-    transform: translateY(120px);
+    transform: translateY(-95px);
     width: 100vh;
     height: 100vh;
     max-width: 500px;
@@ -42,23 +42,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
 }
 
 .login-form {
     position: relative;
     z-index: 2;
-    transform: translateY(-580px)
+    transform: translateY(-600px)
 }
 
-.login-form input {
+.text-descricao {
+    font-style:inherit;
+}
+
+.campo {
     width: 200px;
     padding: 0.5rem;
     border-radius: 15px;
     border: 1px solid #ccc;
-}
-
-.campo {
     background-color:rgb(184, 183, 183);
     border-radius: 15px;
 }
@@ -67,29 +67,19 @@
     border-color: rgb(122, 100, 248);
 }
 
-.button {
+.atendimento {
+    transform:scaleX(150%) scaleY(130%);
+}
+
+.data {
+    transform:scaleX(140%) scaleY(120%);
+}
+
+.button-agendar {
     z-index: 1;
     background-color: #007BFF;
     color: white;
-    padding: 0.75rem 6rem;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 1.2rem;
-    transition: background-color 0.5s;
-    border: none;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-.button-entrar {
-    font-family: "Montserrat", sans-serif;
-    z-index: 1;
-    background-color: #007BFF;
-    color: white;
-    padding: 0.75rem 6rem;
+    padding: 0.75rem 7.5rem;
     text-decoration: none;
     border-radius: 20px;
     font-size: 1.2rem;
@@ -97,29 +87,11 @@
     transition: background-color 0.5s;
     border: none;
     cursor: pointer;
+    transform: translateY(25px);
 }
 
-.button-entrar:hover {
-    background-color: #0056b3;
-}
-
-a {
-    color: #000000;
-    text-decoration: none;
-    transform: translateY(10px);
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.new-account {
-    background-color: #039c83;
-    transform: translateY(80px);
-}
-
-.new-account:hover {
-    background-color: #0056b3;
+.button-agendar:hover {
+    background-color: #0056b3   ;
 }
 
 .logo {
@@ -135,4 +107,8 @@ a:hover {
 .logo img {
     width: 100%;
     height: auto;
+}
+
+optgroup {
+    font-size:20px !important;
 }

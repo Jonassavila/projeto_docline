@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocLine - Login de Agendamento</title>
+    <title>DocLine - Login do profissional</title>
     <link rel="stylesheet" href="../css/body.css">
-    <link rel="stylesheet" href="../css/Styles/login-paciente.css">
+    <link rel="stylesheet" href="../css/Styles/login-profissional.css">
     <link rel="stylesheet" href="./js/script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,14 +18,14 @@
     <div class="container">
         </div>
         <div class="portal-text">
-            <h1>PORTAL DE AGENDAMENTO</h1>
+            <h1>PORTAL DO PROFISSIONAL</h1>
         </div>
         <div class="login-form">
             <input class="campo" type="text" placeholder="E-mail ou CPF">
-            <input class="campo"type="password" placeholder="Senha">
-            <a href="./tala-paciente-profissional.html" id="button-entrar" class="button-entrar">Entrar</a>
+            <input class="campo" type="password" placeholder="Senha">
+            <a href="./tala-profissional-1.html" id="button-entrar" class="button-entrar">Entrar</a>
             <a href="./recuperar-senha.html">Esqueceu a senha?</a>
-            <a href="./criar-conta-paciente.html" class="button new-account">Criar nova conta</a>
+            <a href="./criar-conta-profissional.html" class="button new-account">Criar nova conta</a>
         </div>
     </div>
     <div class="logo">
@@ -84,13 +84,13 @@
                 // Verifica se o nome de usuário e a senha estão corretos
                 if (username === 'jonas' && password === '123') {
                     // Redireciona para a página se os dados estiverem corretos
-                    window.location.href = './tala-paciente-profissional.html';
+                    window.location.href = './tala-profissional-1.html';
                 } else {
                     // Exibe uma mensagem de erro se os dados estiverem incorretos
                     showError('Usuário ou senha incorretos.');
                 }
             });
         });
-    </script>  
+    </script>    
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLine - Pagamento</title>
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/Styles/pagamento.css">
+    <link rel="stylesheet" href="./js/script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="">
+<body>
+    <div class="quadrado-branco"></div>
+    <div class="container">
+        </div>
+        <div class="portal-text">
+            <h1>Pagamento</h1>
+        </div>
+        <div class="login-form">
+            <div class="pix">
+            <a href="https://www.mercadopago.com.br/checkout/v1/payment/redirect/f04da962-4acb-4b16-a6ed-c204486ae991/payment-option-form-v2/?source=link&preference-id=728887170-71f50e57-7602-4975-b14e-237ccb8ff25e&router-request-id=67ca1502-d5ed-4ce7-8b0e-a6edc5cfdcb5&p=55fb78a2dec0d69ec910dc09a652b3f3" class="agenda-1">
+                <img src="../images/pix.png" alt="pix">
+            </a>
+            </div>
+            <div class="cartao">
+            <a href="https://www.mercadopago.com.br/checkout/v1/payment/redirect/f04da962-4acb-4b16-a6ed-c204486ae991/payment-option-form-v2/?source=link&preference-id=728887170-71f50e57-7602-4975-b14e-237ccb8ff25e&router-request-id=67ca1502-d5ed-4ce7-8b0e-a6edc5cfdcb5&p=55fb78a2dec0d69ec910dc09a652b3f3" class="agenda-1">
+                <img src="../images/cartao.png" alt="cartao">
+            </a>
+            </div>
+            <div class="boleto">
+                <a href="https://www.mercadopago.com.br/checkout/v1/payment/redirect/f04da962-4acb-4b16-a6ed-c204486ae991/payment-option-form-v2/?source=link&preference-id=728887170-71f50e57-7602-4975-b14e-237ccb8ff25e&router-request-id=67ca1502-d5ed-4ce7-8b0e-a6edc5cfdcb5&p=55fb78a2dec0d69ec910dc09a652b3f3" class="agenda-1">
+                    <img src="../images/boleto.png" alt="boleto">
+                </a>
+            </div>
+            <div class="plano">
+                <a href="javascript:void(0);" id="plano-link">
+                    <img src="../images/plano.png" alt="plano">
+                </a>
+            </div>
+        </div>
+        <div class="valor-text">
+            <h1>Valor:</h1>
+        </div>
+        <div class="valor">
+            <h1>R$150,00</h1>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="../images/logo.png" alt="">
+    </div>
+    <script>
+        document.getElementById('plano-link').addEventListener('click', function() {
+            // Cria um elemento de fundo escuro para bloquear o restante da interface
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            overlay.style.zIndex = '9';
+            overlay.style.backdropFilter = 'blur(5px)'; // Adiciona o desfoque
+            document.body.appendChild(overlay);
+    
+            // Cria a mensagem
+            const msg = document.createElement('div');
+            msg.classList.add('consulta-msg');
+            msg.innerHTML = `
+                <h1>Consulta Agendada com Sucesso!</h1>
+                <button id="ok-btn">OK</button>
+            `;
+    
+            // Estilo adicional para a mensagem
+            msg.style.position = 'fixed';
+            msg.style.top = '50%';
+            msg.style.left = '50%';
+            msg.style.transform = 'translate(-50%, -50%)';
+            msg.style.backgroundColor = '#0D0D2B';
+            msg.style.color = 'white';
+            msg.style.padding = '30px'; // Aumenta o padding para aumentar o tamanho do retângulo
+            msg.style.borderRadius = '10px';
+            msg.style.zIndex = '10';
+            msg.style.textAlign = 'center';
+        
+            // Adiciona a mensagem ao body
+            document.body.appendChild(msg);
+        
+            // Ajustes de estilo para o botão "OK"
+            const okBtn = document.getElementById('ok-btn');
+            okBtn.style.width = '200px'; // Largura maior
+            okBtn.style.height = '50px'; // Altura mais fina
+            okBtn.style.padding = '10px 0'; // Ajusta o padding para espaçar corretamente
+            okBtn.style.backgroundColor = 'white'; // Cor de fundo
+            okBtn.style.color = '#000'; // Cor do texto
+            okBtn.style.border = 'none'; // Remove borda
+            okBtn.style.borderRadius = '5px'; // Bordas arredondadas
+            okBtn.style.cursor = 'pointer'; // Aponta o cursor ao passar o mouse
+            okBtn.style.fontSize = '30px'; // Ajusta o tamanho da fonte
+            okBtn.style.fontWeight = 'bold'; // Deixa o texto em negrito
+
+        
+            // Evento para o botão "OK"
+            okBtn.addEventListener('click', function() {
+                // Remove a mensagem e o overlay
+                document.body.removeChild(msg);
+                document.body.removeChild(overlay);
+        
+                // Redireciona o usuário
+                window.location.href = '../html/tala-paciente-profissional.html';
+            });
+        });
+    </script>   
+</body>
+</html>

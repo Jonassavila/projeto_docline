@@ -1,36 +1,73 @@
-// Simulated user data for validation
-const users = {
-    medico: { username: 'medico', password: '123456' },
-    paciente: { username: 'paciente', password: '123456' }
-};
+document.addEventListener('DOMContentLoaded', function() {
+    const comorbidadesField = document.getElementById('comorbidades');
+    const modal = document.getElementById('selection-modal');
+    const comorbidadesOptionsDiv = document.getElementById('comorbidades-options');
+    const confirmButton = document.getElementById('confirm-selection');
 
-// Function to handle form submission
-function handleLogin(event) {
-    event.preventDefault(); // Prevent form submission
+    const comorbidades = [
+        'Arritmias cardíacas',
+        'Cardiopatia hipertensiva',
+        'Cardiopatias congênitas no adulto',
+        'Cirrose hepática',
+        'Diabetes mellitus',
+        'Doença cerebrovascular',
+        'Doença renal crônica',
+        'Doenças da aorta, dos grandes vasos e fístulas arteriovenosas',
+        'Hemoglobinopatias graves',
+        'Hipertensão arterial',
+        'Hipertensão Arterial Resistente (HAR)',
+        'Hipertensão pulmonar / Cor-pulmonale',
+        'Imunossuprimidos',
+        'Insuficiência cardíaca',
+        'Miocardiopatias e pericardiopatias',
+        'Obesidade mórbida',
+        'Pneumopatias crônicas graves',
+        'Próteses valvares e dispositivos cardíacos implantados',
+        'Reumáticos como portadores de espondilite anquilosante',
+        'Síndrome de Down'
+    ];
 
-    // Get form data
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    // Quando o campo de comorbidades for clicado
+    comorbidadesField.addEventListener('click', function() {
+        // Limpa opções anteriores, caso existam
+        comorbidadesOptionsDiv.innerHTML = '';
 
-    // Check if the user exists
-    if ((username === users.medico.username && password === users.medico.password) ||
-        (username === users.paciente.username && password === users.paciente.password)) {
-        alert('Login successful!');
-        // Redirect based on user role (e.g., to dashboard pages)
-        if (username === users.medico.username) {
-            window.location.href = 'medico_dashboard.html'; // Redirect to a dashboard or specific page
-        } else {
-            window.location.href = 'paciente_dashboard.html';
-        }
-    } else {
-        alert('Login failed: Invalid username or password');
-    }
-}
+        // Exibe a modal
+        modal.classList.remove('hidden');
 
-// Attach the login handler to the form's submit event
-document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('.login-form');
-    if (loginForm) {
-        loginForm.addEventListener('submit', handleLogin);
-    }
+        // Cria uma lista de checkboxes para as comorbidades
+        comorbidades.forEach((comorbidade, index) => {
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = `comorbidade-${index}`;
+            checkbox.value = comorbidade;
+
+            const label = document.createElement('label');
+            label.htmlFor = `comorbidade-${index}`;
+            label.textContent = comorbidade;
+
+            const div = document.createElement('div');
+            div.appendChild(checkbox);
+            div.appendChild(label);
+
+            comorbidadesOptionsDiv.appendChild(div);
+        });
+    });
+
+    // Confirma a seleção de comorbidades
+    confirmButton.addEventListener('click', function() {
+        const selectedComorbidades = [];
+        comorbidades.forEach((comorbidade, index) => {
+            const checkbox = document.getElementById(`comorbidade-${index}`);
+            if (checkbox.checked) {
+                selectedComorbidades.push(comorbidade);
+            }
+        });
+
+        // Preenche o campo de comorbidades com as selecionadas
+        comorbidadesField.value = selectedComorbidades.join(', ');
+
+        // Fecha a modal
+        modal.classList.add('hidden');
+    });
 });

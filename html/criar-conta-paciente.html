@@ -24,7 +24,7 @@
             <input class="campo-cpf" type="number" placeholder="CPF:">
             <input class="campo-end" type="text" placeholder="Endereço:">
             <input class="campo-mail" type="email" placeholder="E-mail:">
-            <input class="campo-como" type="text" placeholder="Comorbidades:">
+            <input class="campo-como" id="comorbidades" type="text" placeholder="Comorbidades" readonly>
             <input class="campo-alerg" type="text" placeholder="Alergias:">
             <input class="campo-senha" type="password" placeholder="Senha:">
             <input class="campo-confirmar-senha" type="password" placeholder="Confirmar senha:">
@@ -35,9 +35,20 @@
             <a href="./login-paciente.html" class="button new">Criar conta</a>
             <div class="campo-data2">Data de nascimento</div>
         </div>
-    </div>
-    <div class="logo">
-        <img src="../images/logo.png" alt="">
-    </div>
+        <div id="selection-modal" class="selection-modal hidden">
+            <div class="selection-container">
+                <h2>Selecione suas comorbidades:</h2>
+                <div id="comorbidades-options">
+                    <!-- Opções de comorbidades serão geradas aqui -->
+                </div>
+                <button id="confirm-selection" class="confirm-button">OK</button>
+            </div>
+        </div>
+    
+        <div class="logo">
+            <img src="../images/logo.png" alt="">
+        </div>
+    
+        <script src="../js/script.js"></script>
 </body>
 </html>

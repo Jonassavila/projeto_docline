@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLine - Agendamento</title>
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/Styles/agendamento-md-1.css">
+    <link rel="stylesheet" href="./js/script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quadrado-branco"></div>
+    <div class="linha-cinza"></div>
+    <div class="container">
+        </div>
+        <div class="portal-text">
+            <h1>Agendamento</h1>
+        </div>
+        <div class="login-form">
+            <div class="text-descricao"><h3>Selecione o tipo de atendimento</h3></div>
+            <select class="campo atendimento" name="atendimento" id="atendimento">
+                <optgroup>
+                <option value="cons">Consulta</option>
+                <option value="exa">Exames laboratoriais</option>
+                <option value="proc">Procedimentos clínicos</option>
+                <option value="medO">Medicina ocupacional</option>
+                </optgroup>
+            </select>
+            <div class="text-descricao"><h3>Escolha a data e a hora</h3></div>
+            <input class="campo data" type="datetime-local" placeholder="Escolha a data">
+            <span></span>
+            <div class="text-descricao"><h3>Selecione o convenio</h3></div>
+            <select class="campo atendimento" name="convenio" id="convenio">
+                <optgroup>
+                <option value="part">Particular</option>
+                <option value="doc">DoctorClin</option>
+                <option value="uni">Unimed</option>
+                </optgroup>
+            </select>  
+            <a href="./pagamento.html" class="button-agendar">Agendar</a>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="../images/logo.png" alt="">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dateInput = document.querySelector('.campo.data');
+
+            function isValidDateTime(dateTime) {
+                const day = dateTime.getDay(); // 0 = Domingo, 6 = Sábado
+                const hours = dateTime.getHours();
+                const minutes = dateTime.getMinutes();
+                
+                // Verifica se é segunda a sexta (1-5)
+                if (day < 1 || day > 5) return false;
+                
+                // Verifica se está dentro do intervalo de 08:00-11:30 ou 13:30-17:30
+                if ((hours >= 8 && (hours < 11 || (hours === 11 && minutes <= 30))) ||
+                    (hours >= 13 && (hours < 17 || (hours === 17 && minutes <= 30)))) {
+                    return true;
+                }
+                return false;
+            }
+
+            dateInput.addEventListener('input', function () {
+                const selectedDate = new Date(this.value);
+                const now = new Date();
+
+                // Verifica se a data é futura e o horário é válido
+                if (selectedDate <= now || !isValidDateTime(selectedDate)) {
+                    alert('Por favor, selecione uma data válida: dias úteis (segunda a sexta), das 8h às 11h30 e das 13h30 às 17h30.');
+                    this.value = ''; // Limpa o campo
+                }
+            });
+        });
+    </script>
+</body>
+</html>
