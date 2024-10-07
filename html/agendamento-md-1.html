@@ -13,6 +13,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="menu" onclick="toggleMenu()">
+        <div class="usuario">
+            <img src="../images/img-usuario.png" alt="">
+        </div>
+    </div>
+    <div id="dropdownMenu" class="dropdown-content">
+        <a href="#">Perfil</a>
+        <a href="#">Adicionar Dependente</a>
+        <a href="../index.html">Sair</a>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+
+        // Fecha o menu se o usuário clicar fora dele
+        window.onclick = function(event) {
+            if (!event.target.matches('#menu') && !event.target.matches('.usuario img')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
     <div class="quadrado-branco"></div>
     <div class="linha-cinza"></div>
     <div class="container">
@@ -44,9 +73,9 @@
             <a href="./pagamento.html" class="button-agendar">Agendar</a>
         </div>
     </div>
-    <div class="logo">
-        <img src="../images/logo.png" alt="">
-    </div>
+    <a href="../index.html" class="logo">
+        <img src="../images/logo.png" alt="logo">
+    </a>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const dateInput = document.querySelector('.campo.data');
