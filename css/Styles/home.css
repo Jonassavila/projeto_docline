@@ -24,7 +24,7 @@
 
 .welcome-text {
     z-index: 1;
-    font-size:23px;
+    font-size: 23px;
     line-height: 15px;
     font-weight: bold;
     flex-direction: column;
@@ -41,7 +41,7 @@
 }
 
 .button-medico {
-    transform:scaleX(90%)
+    transform: scaleX(90%)
 }
 
 .button {

@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocLine - Login de Agendamento</title>
+    <title>DocLine - Login do Paciente</title>
     <link rel="stylesheet" href="../css/body.css">
     <link rel="stylesheet" href="../css/Styles/login-paciente.css">
-    <link rel="stylesheet" href="./js/script.js">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik:wght@300..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="quadrado-branco"></div>
     <div class="linha-cinza"></div>
     <div class="container">
-        </div>
-        <div class="portal-text">
-            <h1>PORTAL DE AGENDAMENTO</h1>
-        </div>
-        <div class="login-form">
-            <input class="campo" type="text" placeholder="E-mail ou CPF">
-            <input class="campo"type="password" placeholder="Senha">
-            <a href="./tala-paciente-profissional.html" id="button-entrar" class="button-entrar">Entrar</a>
-            <a href="./recuperar-senha.html">Esqueceu a senha?</a>
-            <a href="./criar-conta-paciente.html" class="button new-account">Criar nova conta</a>
-        </div>
+    </div>
+    <div class="portal-text">
+        <h1>PORTAL DE AGENDAMENTO</h1>
+    </div>
+    <div class="login-form">
+        <input class="campo" type="text" placeholder="E-mail ou CPF">
+        <input class="campo" type="password" placeholder="Senha">
+        <a href="./tala-paciente-profissional.html" id="button-entrar" class="button-entrar">Entrar</a>
+        <a href="./recuperar-senha.html">Esqueceu a senha?</a>
+        <a href="./criar-conta-paciente.html" class="button new-account">Criar nova conta</a>
+    </div>
     </div>
     <a href="../index.html" class="logo">
         <img src="../images/logo.png" alt="logo">
     </a>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Seleciona os campos de input e o botão "Entrar"
             const usernameInput = document.querySelector('.campo[type="text"]');
             const passwordInput = document.querySelector('.campo[type="password"]');
             const enterButton = document.getElementById('button-entrar');
-    
+
             // Função para exibir a mensagem de erro
             function showError(message) {
                 // Cria o elemento de mensagem de erro
@@ -47,7 +48,7 @@
                     <h2>${message}</h2>
                     <button id="ok-btn">OK</button>
                 `;
-    
+
                 // Estilo adicional para a mensagem de erro
                 errorMsg.style.position = 'fixed';
                 errorMsg.style.top = '50%';
@@ -61,26 +62,26 @@
                 errorMsg.style.textAlign = 'center';
                 errorMsg.style.fontSize = '18px';
                 errorMsg.style.border = '1px solid #0D0D2B';
-    
+
                 // Adiciona a mensagem ao body
                 document.body.appendChild(errorMsg);
-    
+
                 // Evento para o botão "OK"
-                document.getElementById('ok-btn').addEventListener('click', function() {
+                document.getElementById('ok-btn').addEventListener('click', function () {
                     // Remove a mensagem
                     document.body.removeChild(errorMsg);
                 });
             }
-    
+
             // Adiciona um evento de clique ao botão "Entrar"
-            enterButton.addEventListener('click', function(event) {
+            enterButton.addEventListener('click', function (event) {
                 // Impede o comportamento padrão do link
                 event.preventDefault();
-    
+
                 // Obtém os valores dos campos de input
                 const username = usernameInput.value.trim();
                 const password = passwordInput.value.trim();
-    
+
                 // Verifica se o nome de usuário e a senha estão corretos
                 if (username === 'jonas' && password === '123') {
                     // Redireciona para a página se os dados estiverem corretos
@@ -91,6 +92,7 @@
                 }
             });
         });
-    </script>  
+    </script>
 </body>
+
 </html>

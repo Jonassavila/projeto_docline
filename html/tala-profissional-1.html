@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLine - Portal do Profissional - Home</title>
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/Styles/tala-profissional-1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik:wght@300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="./tala-profissional-1.html" class="logo">
+        <img src="../images/logo.png" alt="logo">
+    </a>
+    <div id="menu" onclick="toggleMenu()">
+        <div class="usuario">
+            <img src="../images/img-usuario.png" alt="">
+        </div>
+    </div>
+    <div id="dropdownMenu" class="dropdown-content">
+        <a href="./perfil-proficional.html">Perfil</a>
+        <a href="./tela-proficional-clinica.html">Personalizar</a>
+        <a href="../index.html">Sair</a>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('#menu') && !event.target.matches('.usuario img')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="quadrado-branco"></div>
+    <div class="container">
+    </div>
+    <div class="cabecalho-text">
+        <a href="./tala-profissional-financeiro.html">
+            <h1>Financeiro</h1>
+        </a>
+        <span> </span>
+        <a href="./tala-profissional-agenda.html">
+            <h1>Agenda</h1>
+        </a>
+    </div>
+    </div>
+    <div class="t-consultas">
+        <h1>Consultas de Hoje</h1>
+    </div>
+    <div class="consultas">
+        <h3>08:30 - Jonas S. de Avila</h3>
+        <h3>09:30 - Clark Kent</h3>
+        <h3>10:30 - Barry Allen</h3>
+        <h3>11:30 - Jason Tood</h3>
+        <h3>13:30 - Johnny Blaze</h3>
+        <h3>14:30 - Natasha Romanoff</h3>
+        <h3>15:30 - John Jones</h3>
+        <h3>16:30 - Peter Parker</h3>
+        <h3>17:30 - Tonny Stark</h3>
+        <h3>18:30 - Bruce Wayne</h3>
+    </div>
+    <div class="t-historico">
+        <h1>Historico do paciente</h1>
+    </div>
+    <div class="quadrado-cinza"></div>
+    <div class="historico">
+        <h3>Nome: Jonas Silveira de Avila</h3>
+        <h3>Idede: 33 / Data de nacimento: 01/05/1991</h3>
+        <h3>Consultas anteriores</h3>
+        <h3>Data: 31/10/2024 / Observações: Feita infiltração</h3>
+        <h3>Data: 24/10/2024 / Observações: Feita fisioterapia</h3>
+        <h3>Data: 17/10/2024 / Observações: Feita fisioterapia</h3>
+        <h3>Data: 10/10/2024 / Observações: Feita fisioterapia</h3>
+        <h3>Data: 03/10/2024 / Observações: Feita infiltração</h3>
+    </div>
+    <div class="t-grafico">
+        <h1>Número de consultas</h1>
+    </div>
+    <canvas id="graficoConsultas" width="500" height="400"></canvas>
+    <script>
+        const ctx = document.getElementById('graficoConsultas').getContext('2d');
+        const graficoConsultas = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
+                datasets: [{
+                    label: 'Consultas',
+                    data: [43, 32, 48, 36, 41], // Números fictícios
+                    borderColor: '#714bfa',
+                    backgroundColor: 'rgba(113, 75, 250, 0.1)',
+                    fill: true,
+                    pointRadius: 0,
+                    hoverRadius: 5,
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                plugins: {
+                    tooltip: {
+                        enabled: true,
+                        mode: 'nearest',
+                        intersect: false,
+                        callbacks: {
+                            label: function (context) {
+                                return `Consultas: ${context.raw}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Semanas do Mês'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Número de Consultas'
+                        },
+                        beginAtZero: true
+                    }
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: false
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+
+</html>

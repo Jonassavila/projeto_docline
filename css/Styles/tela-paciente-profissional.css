@@ -71,7 +71,7 @@
         position: absolute;
         top: 17%;
         left: 4%;
-        border-radius: 20px;  
+        border-radius: 20px;
     }
 
     .logo-clinica img {
@@ -123,12 +123,13 @@
         height: 100vh;
     }
 
-    .cabecalho-text, buttons{
+    .cabecalho-text,
+    buttons {
         display: flex;
         align-items: center;
         position: absolute;
         top: 48%;
-        left: 20%; 
+        left: 20%;
     }
 
     .cabecalho-text {
@@ -136,7 +137,8 @@
         font-size: 30px;
     }
 
-    .cabecalho-text, span {
+    .cabecalho-text,
+    span {
         width: 1200px;
     }
 
@@ -196,14 +198,14 @@
     }
 
     .quadrado-cinza-1 {
-            position: absolute;
-            top: 83%;
-            left: 45%;
-            width: 100%;
-            height: 150px;
-            max-width: 745px;
-            background-color: rgb(199, 199, 199);
-            border-radius: 30px;
+        position: absolute;
+        top: 83%;
+        left: 45%;
+        width: 100%;
+        height: 150px;
+        max-width: 745px;
+        background-color: rgb(199, 199, 199);
+        border-radius: 30px;
     }
 
     .dec-md-1 {
@@ -228,9 +230,9 @@
         border-radius: 20px;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
         cursor: pointer;
-        text-decoration: none;  
+        text-decoration: none;
     }
-    
+
     .agenda-1 img {
         width: 100%;
         height: auto;
@@ -292,14 +294,14 @@
     }
 
     .dec-md-2 {
-    position: absolute;
-    top: 113%;
-    left: 46%;
-    right: 12%;
-    font-size: 18px;
-    color: #333;
-    max-width: 80%;
-    line-height: 1.5;
+        position: absolute;
+        top: 113%;
+        left: 46%;
+        right: 12%;
+        font-size: 18px;
+        color: #333;
+        max-width: 80%;
+        line-height: 1.5;
     }
 
     .agenda-2 {
@@ -315,13 +317,13 @@
         cursor: pointer;
         text-decoration: none;
     }
-    
+
     .agenda-2 img {
         width: 100%;
         height: auto;
         border-radius: 20px;
     }
-    
+
     .agenda-2:hover {
         filter: grayscale(0);
         opacity: 1;
@@ -387,15 +389,15 @@
     }
 
     .dec-md-3 {
-    position: absolute;
-    top: 143%;
-    left: 46%;
-    right: 12%;
-    font-size: 18px;
-    color: #333;
-    max-width: 80%;
-    line-height: 1.5;
-    } 
+        position: absolute;
+        top: 143%;
+        left: 46%;
+        right: 12%;
+        font-size: 18px;
+        color: #333;
+        max-width: 80%;
+        line-height: 1.5;
+    }
 
     .agenda-3 {
         display: inline-block;
@@ -410,7 +412,7 @@
         cursor: pointer;
         text-decoration: none;
     }
-    
+
     .agenda-3 img {
         width: 100%;
         height: auto;
@@ -482,14 +484,14 @@
     }
 
     .dec-md-4 {
-    position: absolute;
-    top: 173%;
-    left: 46%;
-    right: 12%;
-    font-size: 18px;
-    color: #333;
-    max-width: 80%;
-    line-height: 1.5;
+        position: absolute;
+        top: 173%;
+        left: 46%;
+        right: 12%;
+        font-size: 18px;
+        color: #333;
+        max-width: 80%;
+        line-height: 1.5;
     }
 
     .agenda-4 {
@@ -505,12 +507,12 @@
         cursor: pointer;
         text-decoration: none;
     }
-    
+
     .agenda-4 img {
         width: 100%;
         height: auto;
         border-radius: 20px;
-    }    
+    }
 
     .agenda-4:hover {
         filter: grayscale(0);
@@ -530,24 +532,26 @@
     }
 
     .dropdown-content {
-        display: none; /* Esconde o menu por padrão */
+        display: none;
+        /* Esconde o menu por padrão */
         position: absolute;
         background-color: white;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         top: 10px;
-        right: 120px; /* Ajusta a posição se necessário */
+        right: 120px;
+        /* Ajusta a posição se necessário */
         border-radius: 20px;
     }
-    
+
     .dropdown-content a {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
     }
-    
+
     .dropdown-content a:hover {
         background-color: #714bfa;
         border-radius: 20px;
@@ -573,15 +577,13 @@
         flex-direction: column;
         align-items: flex-end;
         row-gap: 8px;
-    
+
         z-index: 10;
-    
+
         border: 0;
         background: transparent;
     }
-    
+
     #menu:hover {
         cursor: pointer;
     }
-
-    

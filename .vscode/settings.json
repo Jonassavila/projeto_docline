@@ -1,0 +1,9 @@
+{
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": true,
+    "zenMode.hideActivityBar": true,
+    "zenMode.hideLineNumbers": true,
+    "zenMode.hideStatusBar": true,
+    "zenMode.restore": true,
+    "zenMode.silentNotifications": true
+}

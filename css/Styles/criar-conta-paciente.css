@@ -42,7 +42,7 @@
 }
 
 .campo-nome {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(-250px) translateY(-70px);
     min-width: 400px;
@@ -54,7 +54,7 @@
 }
 
 .campo-cpf {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(-250px) translateY(-60px);
     min-width: 400px;
@@ -66,7 +66,7 @@
 }
 
 .campo-end {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(-10px) translateY(-50px);
     min-width: 880px;
@@ -78,7 +78,7 @@
 }
 
 .campo-mail {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(-250px) translateY(-40px);
     min-width: 400px;
@@ -90,7 +90,7 @@
 }
 
 .campo-como {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(-250px) translateY(-30px);
     min-width: 400px;
@@ -102,7 +102,7 @@
 }
 
 .campo-alerg {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(-10px) translateY(-20px);
     min-width: 880px;
@@ -114,7 +114,7 @@
 }
 
 .campo-senha {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(-250px) translateY(-10px);
     min-width: 400px;
@@ -126,7 +126,7 @@
 }
 
 .campo-confirmar-senha {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(230px) translateY(-60px);
     min-width: 400px;
@@ -138,7 +138,7 @@
 }
 
 .campo-nome-mae {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(230px) translateY(-420px);
     min-width: 400px;
@@ -150,7 +150,7 @@
 }
 
 .campo-contato {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(230px) translateY(-533px);
     min-width: 400px;
@@ -162,7 +162,7 @@
 }
 
 .campo-data {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(230px) translateY(-400px);
     min-width: 400px;
@@ -174,7 +174,7 @@
 }
 
 .campo-tip {
-    background-color:rgb(184, 183, 183);
+    background-color: rgb(184, 183, 183);
     border-radius: 15px;
     transform: translateX(230px) translateY(-390px);
     min-width: 400px;

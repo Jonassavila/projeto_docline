@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocLine - Portal do Paciente - Sobre</title>
+    <title>DocLine - Portal do Profissional - Agenda</title>
     <link rel="stylesheet" href="../css/body.css">
-    <link rel="stylesheet" href="../css/Styles/tela-paciente-sobre.css">
+    <link rel="stylesheet" href="../css/Styles/tala-profissional-agenda.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik:wght@300..900&display=swap"
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <a href="../index.html" class="logo">
+    <a href="./tala-profissional-1.html" class="logo">
         <img src="../images/logo.png" alt="logo">
     </a>
     <div id="menu" onclick="toggleMenu()">
@@ -23,8 +23,8 @@
         </div>
     </div>
     <div id="dropdownMenu" class="dropdown-content">
-        <a href="./perfil-paciente.html">Perfil</a>
-        <a href="./adicionar-dependente.html">Adicionar Dependente</a>
+        <a href="./perfil-proficional.html">Perfil</a>
+        <a href="./tela-proficional-clinica.html">Personalizar</a>
         <a href="../index.html">Sair</a>
     </div>
     <script>
@@ -32,8 +32,6 @@
             const menu = document.getElementById("dropdownMenu");
             menu.style.display = menu.style.display === "block" ? "none" : "block";
         }
-
-        // Fecha o menu se o usuário clicar fora dele
         window.onclick = function (event) {
             if (!event.target.matches('#menu') && !event.target.matches('.usuario img')) {
                 const dropdowns = document.getElementsByClassName("dropdown-content");
@@ -46,39 +44,23 @@
             }
         }
     </script>
-    <div class="quadrado-branco"></div>
-    <div class="linha-cinza"></div>
-    <div class="img-clinica">
-        <img src="../images/clinica.png" alt="">
+    <div class="quadrado-branco">
+        <iframe src="https://calendar.google.com/calendar/embed?src=jonas.silveiradeavila@gmail.com" style="border: 0"
+            width="100%" height="100%" frameborder="0" scrolling="no">
+        </iframe>
     </div>
-    <a href="./tala-paciente-sobre.html" class="logo-clinica">
-        <img src="../images/logo-clinica.jpg" alt="Logo Clinica">
-    </a>
     <div class="container">
     </div>
     <div class="cabecalho-text">
-        <a href="./tala-paciente-profissional.html">
-            <h1>Profissionais</h1>
+        <a href="./tala-profissional-financeiro.html">
+            <h1>Financeiro</h1>
         </a>
         <span> </span>
-        <a href="./tala-paciente-endereco.html">
-            <h1>Endereço</h1>
-        </a>
-        <span> </span>
-        <a href="./tala-paciente-sobre.html">
-            <h1>Sobre</h1>
+        <a href="./tala-profissional-agenda.html">
+            <h1>Agenda</h1>
         </a>
     </div>
-    <div class="quadrado-cinza"></div>
-    <div class="texto">
-        <h1>A Clínica Médica Novo Hamburgo é uma clínica particular acessível que oferece consultas médicas em diversas
-            especialidades, exames laboratoriais e de imagem, procedimentos clínicos e estéticos e medicina
-            ocupacional.<br /><br />Atendemos em uma clínica moderna com preços baixos e atendimento humanizado, com a
-            atenção que sua saúde merece.
-        </h1>
     </div>
-    </div>
-
 </body>
 
 </html>

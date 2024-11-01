@@ -17,7 +17,7 @@
     height: 100vh;
 }
 
-.portal-text{
+.portal-text {
     position: relative;
     z-index: 2;
     font-size: 25px;
@@ -94,7 +94,7 @@
 
 .logo {
     position: absolute;
-    top:15%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -107,7 +107,7 @@
     height: auto;
 }
 
-.valor-text{
+.valor-text {
     position: relative;
     z-index: 2;
     font-size: 30px;
@@ -138,14 +138,16 @@
 
 
 .dropdown-content {
-    display: none; /* Esconde o menu por padrão */
+    display: none;
+    /* Esconde o menu por padrão */
     position: absolute;
     background-color: white;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     top: 10px;
-    right: 120px; /* Ajusta a posição se necessário */
+    right: 120px;
+    /* Ajusta a posição se necessário */
     border-radius: 20px;
 }
 

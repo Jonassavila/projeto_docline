@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLine - Portal do Profissional - Financeiro</title>
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/Styles/tala-profissional-financeiro.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik:wght@300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="./tala-profissional-1.html" class="logo">
+        <img src="../images/logo.png" alt="logo">
+    </a>
+    <div id="menu" onclick="toggleMenu()">
+        <div class="usuario">
+            <img src="../images/img-usuario.png" alt="">
+        </div>
+    </div>
+    <div id="dropdownMenu" class="dropdown-content">
+        <a href="./perfil-proficional.html">Perfil</a>
+        <a href="./tela-proficional-clinica.html">Personalizar</a>
+        <a href="../index.html">Sair</a>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('#menu') && !event.target.matches('.usuario img')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="quadrado-branco"></div>
+    <div class="container">
+    </div>
+    <div class="cabecalho-text">
+        <a href="./tala-profissional-financeiro.html">
+            <h1>Financeiro</h1>
+        </a>
+        <span> </span>
+        <a href="./tala-profissional-agenda.html">
+            <h1>Agenda</h1>
+        </a>
+    </div>
+    </div>
+    <h1 id="totalEntradas" style="color: #100147; font-size: 48px; font-weight: bold;"></h1>
+    <div class="t-consultas">
+        <h1>Entradas de Hoje</h1>
+    </div>
+    <div class="consultas">
+        <h3>R$300,00 - Jonas S. de Avila</h3>
+        <h3>R$200,00 - Clark Kent</h3>
+        <h3>R$300,00 - Barry Allen</h3>
+        <h3>R$200,00 - Jason Tood</h3>
+        <h3>R$150,00 - Johnny Blaze</h3>
+        <h3>R$200,00 - Natasha Romanoff</h3>
+        <h3>R$200,00 - John Jones</h3>
+        <h3>R$500,00 - Peter Parker</h3>
+        <h3>R$200,00 - Tonny Stark</h3>
+        <h3>R$200,00 - Bruce Wayne</h3>
+    </div>
+    <div class="t-grafico">
+        <h1>Entradas do mês</h1>
+    </div>
+    <canvas id="graficoConsultas" width="500" height="400"></canvas>
+    <script>
+        const ctx = document.getElementById('graficoConsultas').getContext('2d');
+        const graficoConsultas = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
+                datasets: [{
+                    label: 'R$ ',
+                    data: [8600, 6400, 9600, 7200, 8200], // Números fictícios
+                    borderColor: '#714bfa',
+                    backgroundColor: 'rgba(113, 75, 250, 0.1)',
+                    fill: true,
+                    pointRadius: 0,
+                    hoverRadius: 5,
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                plugins: {
+                    tooltip: {
+                        enabled: true,
+                        mode: 'nearest',
+                        intersect: false,
+                        callbacks: {
+                            label: function (context) {
+                                return `R$ ${context.raw},00`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Semanas do Mês'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Valores em reais'
+                        },
+                        beginAtZero: true
+                    }
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: false
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+    <div class="t-grafico2">
+        <h1>Entradas do ano</h1>
+    </div>
+    <canvas id="graficoAnual" width="500" height="400"></canvas>
+    <script>
+        const ctxAnual = document.getElementById('graficoAnual').getContext('2d');
+        const dataAnual = [8500, 17600, 29200, 38400, 49800, 38700, 29300, 35100, 46200, 40200, 40700, 19900]; // Valores fictícios
+        // Calcula o total das entradas do ano
+        const totalEntradas = dataAnual.reduce((acc, val) => acc + val, 0); // Calcula a soma
+        // Formata o total com separador de milhar
+        const totalFormatado = totalEntradas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        // Atualiza o texto do título com o valor formatado
+        document.getElementById('totalEntradas').innerText = `Total do Ano: ${totalFormatado}`;
+        const graficoAnual = new Chart(ctxAnual, {
+            type: 'bar',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                datasets: [{
+                    label: 'R$ ',
+                    data: dataAnual,
+                    backgroundColor: 'rgba(113, 75, 250, 0.3)',
+                    borderColor: '#714bfa',
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                plugins: {
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function (context) {
+                                return `R$ ${context.raw},00`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Meses do Ano'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Valores em reais'
+                        },
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+
+</html>
