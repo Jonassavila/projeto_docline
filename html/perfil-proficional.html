@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLine - Portal do Profissional - Perfil</title>
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/Styles/perfil-proficional.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik:wght@300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="./tala-profissional-1.html" class="logo">
+        <img src="../images/logo.png" alt="logo">
+    </a>
+    <div id="menu" onclick="toggleMenu()">
+        <div class="usuario">
+            <img src="../images/img-usuario.png" alt="">
+        </div>
+    </div>
+    <div id="dropdownMenu" class="dropdown-content">
+        <a href="./perfil-proficional.html">Perfil</a>
+        <a href="./tela-proficional-clinica.html">Personalizar</a>
+        <a href="../index.html">Sair</a>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('#menu') && !event.target.matches('.usuario img')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="quadrado-branco"></div>
+    <div class="container">
+    </div>
+    <div class="cabecalho-text">
+        <a href="./tala-profissional-financeiro.html">
+            <h1>Financeiro</h1>
+        </a>
+        <span> </span>
+        <a href="./tala-profissional-agenda.html">
+            <h1>Agenda</h1>
+        </a>
+    </div>
+    <div class="img-med">
+        <img src="../images/img-dr.png" alt="">
+    </div>
+    <DIV class="titulo2">
+        <h1>Altere sua imagem</h1>
+    </DIV>
+    <DIV class="titulo">
+        <h1>Seus dados que aparecem para os pacientes</h1>
+    </DIV>
+    <div class="quadrado-cinza"></div>
+    <div class="texto">
+        <h1>Nome: Dra. Luana<br /> Especialidade: Oncologista<br />CRM: 56858<br />RQE: 3645<br /><br>Escreva uma breve descrição: <br>
+        <br />Faculdade de Medicina: Universidade Estadual de Porto alegre, graduada em 2004 com Honras Médicas. Atuou nos Hospitais: Unimed de Novo Hamburgo e Regina de Novo Hamburgo.
+        </h1>
+    </div>
+    </div>
+    <script src="../js/editarElementos.js"></script>
+</body>
+
+</html>

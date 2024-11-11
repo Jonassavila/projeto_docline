@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLine - Portal do Profissional - Personalizar Clinica</title>
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/Styles/tela-proficional-clinica.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik:wght@300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="./tala-profissional-1.html" class="logo">
+        <img src="../images/logo.png" alt="logo">
+    </a>
+    <div id="menu" onclick="toggleMenu()">
+        <div class="usuario">
+            <img src="../images/img-usuario.png" alt="">
+        </div>
+    </div>
+    <div id="dropdownMenu" class="dropdown-content">
+        <a href="./perfil-proficional.html">Perfil</a>
+        <a href="./tela-proficional-clinica.html">Personalizar</a>
+        <a href="../index.html">Sair</a>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('#menu') && !event.target.matches('.usuario img')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="quadrado-branco"></div>
+    <div class="container">
+    </div>
+    <div class="cabecalho-text">
+        <a href="./tala-profissional-financeiro.html">
+            <h1>Financeiro</h1>
+        </a>
+        <span> </span>
+        <a href="./tala-profissional-agenda.html">
+            <h1>Agenda</h1>
+        </a>
+    </div>
+    </div>
+    <div class="img-clinica">
+        <img src="../images/clinica.png" alt="">
+    </div>
+    <div class="logo-clinica">
+        <img src="../images/logo-clinica.jpg" alt="">
+    </div>
+    <DIV class="titulo">
+        <h1>Breve texto sobre a clínica</h1>
+    </DIV>
+    <div class="quadrado-cinza"></div>
+    <div class="texto">
+        <h1>A Clínica Médica Novo Hamburgo é uma clínica particular acessível que oferece consultas médicas em diversas
+            especialidades, exames laboratoriais e de imagem, procedimentos clínicos e estéticos e medicina
+            ocupacional.<br /><br />Atendemos em uma clínica moderna com preços baixos e atendimento humanizado, com a
+            atenção que sua saúde merece.
+        </h1>
+    </div>
+    <DIV class="titulo2">
+        <h1>Endereço, contato e horário de funcionamento</h1>
+    <div class="quadrado-cinza2"></div>
+    <div class="texto2">
+        <h1>Av. Pedro Adams Filho, 3436 - Pátria Nova, Novo Hamburgo - RS, 93410-038.<br /><br /> Telefone: (51)
+            99696-6509. E-mail: contato@clinica médica.com.br <br /><br />Horário de funcionamento: de segunda a sexta
+            das 8:30h as 11:30h e das 13:30h. as 17:30h.
+        </h1>
+    </div>
+    <script src="../js/editarElementos.js"></script>
+</body>
+
+</html>
