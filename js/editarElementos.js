@@ -99,7 +99,8 @@ function enableTextEdit(textSelector) {
 }
 
 // Inicializa a edição para imagens e textos
-enableImageEdit('.img-med');
+enableImageEdit('.logo-clinica img');
 enableImageEdit('.img-clinica img');
 enableTextEdit('.texto h1');
 enableTextEdit('.texto2 h1');
+enableImageEdit('.img-med img');
